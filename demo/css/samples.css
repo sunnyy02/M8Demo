@@ -1,0 +1,202 @@
+﻿/*!
+ * Durandal 2.1.0 Copyright (c) 2012 Blue Spire Consulting, Inc. All Rights Reserved.
+ * Available via the MIT license.
+ * see: http://durandaljs.com or https://github.com/BlueSpire/Durandal for details
+ */
+
+.page-host {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 50px;
+    bottom: 0;
+    overflow-x: hidden;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+section {
+    margin: 0 20px;
+}
+
+.navbar-nav li.loader {
+    margin: 12px 20px 0 0;
+    visibility: hidden;
+}
+
+.navbar-nav li.loader.active {
+    visibility: visible;
+}
+
+.knockout-samples {
+    margin-top: 20px;
+}
+
+.planet { background-color: #AAEECC; padding: 0.35em; border: 1px solid silver; margin-bottom: 0.5em; font-size: 0.95em; }
+.planet.rock { background-color: #EECCAA; }
+
+﻿.configuration, .tweets, .tweets td { font-size: 14px; }
+.configuration { background-color: #DEDEDE; border: 2px solid gray; float:left; height: 31em; padding: 0.5em; border-right-width:0; }
+.tweets { width: 55%; border: 2px solid gray; height: 31em; overflow: scroll; overflow-x: hidden; background-color: Black; color: White; padding: 0.5em; position: relative; }
+.tweets table { border-width: 0;}
+.tweets tr { vertical-align: top; }
+.tweets td { padding: 0.4em 0.3em .8em 0.4em; border-width: 0; }
+.tweets img { width: 10em; }
+.tweetInfo { color: Gray; font-size: 0.9em; }
+.twitterUser { color: #77AAFF; text-decoration: none; font-size: 1.1em; font-weight: bold; }
+input.invalid { border: 1px solid red !important; background-color: #FFAAAA !important; }
+
+.listChooser select, .listChooser button { vertical-align:top; }
+.listChooser select { width: 60%; font-size:1.2em; height:1.4em; }
+.listChooser button { width: 19%; height:1.68em; float:right; }
+
+.currentUsers { height: 24em; overflow-y: auto; overflow-x: hidden; }
+.currentUsers button { float: right; height: 2.5em; margin-top: 0.4em; margin-right: 0.2em; padding-left: 1em; padding-right: 1em; }
+.currentUsers ul, .configuration li { list-style: none; margin: 0; padding: 0 }
+.currentUsers li { height: 2.4em; font-size: 1.2em; background-color: #A7D0E3; border: 1px solid gray; margin-bottom: 0.3em; -webkit-border-radius: 5px; -moz-border-radius: 5px; -webkit-box-shadow: 0 0.2em 0.5em gray; -moz-box-shadow: 0 0.2em 0.5em gray; }
+.currentUsers li div { padding: 0.6em; }
+.currentUsers li:hover { background-color: #EEC; }
+
+.configuration form label { width: 25%; display: inline-block; text-align:right; overflow: hidden; }
+.configuration form input { width:40%; font-size: 1.3em; border:1px solid silver; background-color: White; padding: 0.1em; }
+.configuration form button { width: 20%; margin-left: 0.3em; height: 2em; }
+
+.loadingIndicator { position: absolute; top: 0.1em; left: 0.1em; font: 0.8em Arial; background-color: #229; color: White; padding: 0.2em 0.5em 0.2em 0.5em; display: none; }
+
+.configuration select { height: 1.7em; }
+.configuration button { height: 2em; }
+
+.gly-ani {
+    animation: ani 2s infinite linear;
+}
+@keyframes ani {
+    0% {
+    transform: rotate(0deg);
+    }
+    100% {
+    transform: rotate(359deg);
+    }
+}
+.loadingBar {
+    position:fixed;width:100%;height:100%;text-align:center;top:40%
+}
+
+
+.userIcon
+{
+    font-size: 55px;
+}
+
+.detailsStyle
+{
+    position: absolute;
+    top: 10px;
+    left: 90px;
+}
+
+.connectButton
+{
+    position: absolute;
+    top: 30px;
+    right: 20px;
+}
+
+.available
+{
+    color: #32753b;
+}
+
+.nameStyle
+{
+    font-size: 20px;
+}
+
+.rateStyle
+{
+    font-size: 12px;
+}
+
+.countryStyle
+{
+    font-size: 15px;
+}
+
+.messageButton
+{
+    position: absolute;
+    top: 30px;
+    right: 70px;
+}
+
+.titleStyle
+{
+    font-size: 20px;
+}
+
+.ratingStyle
+{
+    font-size: 8px;
+}
+
+.ratingContainer
+{
+    position: relative;
+    top: -5px;
+}
+
+.demographicContainer
+{
+    position: absolute;
+    top: 15px;
+    left: 500px;
+}
+
+.demographicText
+{
+    color: #ABABAB;
+}
+
+.africa
+{
+    position: absolute;
+    top: 15px;
+    left: 335px;
+}
+.africasvg {
+    position: absolute;
+    top: 15px;
+    left: 300px;
+    width: 27px;
+    height: 18px;
+    background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9Im5vIj8+PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB3aWR0aD0iMjciIGhlaWdodD0iMTgiIHZpZXdCb3g9IjAgMCA5IDYiPjxjbGlwUGF0aCBpZD0iWiI+PHBhdGggZD0iTTAsMCA0LjUsMyAwLDYiIGlkPSJYIi8+PC9jbGlwUGF0aD48Y2xpcFBhdGggaWQ9IkEiPjxwYXRoIGQ9Ik0wLDBIOVY2SDB6Ii8+PC9jbGlwUGF0aD48ZyBjbGlwLXBhdGg9InVybCgjQSkiPjxwYXRoIGQ9Ik0wLDBWNkg5VjB6IiBmaWxsPSIjMDAyMzk1Ii8+PHBhdGggZD0iTTAsMFYzSDlWMHoiIGZpbGw9IiNkZTM4MzEiLz48ZyBzdHJva2Utd2lkdGg9IjIiIHN0cm9rZT0iI2ZmZiI+PHBhdGggZD0iTTAsMCA0LjUsMyAwLDZNNC41LDNIOSIgaWQ9IlciLz48dXNlIHhsaW5rOmhyZWY9IiNYIiBzdHJva2U9IiNmZmI2MTIiIGNsaXAtcGF0aD0idXJsKCNaKSIvPjwvZz48dXNlIHhsaW5rOmhyZWY9IiNXIiBmaWxsPSJub25lIiBzdHJva2U9IiMwMDdhNGQiIHN0cm9rZS13aWR0aD0iMS4yIi8+PC9nPjwvc3ZnPg==);
+}
+
+.greece
+{
+    position: absolute;
+    top: 45px;
+    left: 335px;
+}
+.flag-of-greece {
+    position: absolute;
+    top: 45px;
+    left: 300px;
+    width: 27px;
+    height: 18px;
+	background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz48c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjI3IiBoZWlnaHQ9IjE4IiB2aWV3Qm94PSIwIDAgMjcgMTgiPjxyZWN0IGZpbGw9IiMwRDVFQUYiIHdpZHRoPSIyNyIgaGVpZ2h0PSIxOCIvPjxwYXRoIGZpbGw9Im5vbmUiIHN0cm9rZS13aWR0aD0iMiIgc3Ryb2tlPSIjRkZGIiBkPSJNNSwwVjExIE0wLDVIMTAgTTEwLDNIMjcgTTEwLDdIMjcgTTAsMTFIMjcgTTAsMTVIMjciLz48L3N2Zz4=);
+}
+
+.china
+{
+    position: absolute;
+    top: 45px;
+    left: 335px;
+}
+.flag-of-the-peoples-republic-of-china {
+    width: 27px;
+    height: 18px;
+    position: absolute;
+    top: 45px;
+    left: 300px;
+	background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz48c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHdpZHRoPSIyNyIgaGVpZ2h0PSIxOCIgdmlld0JveD0iMCAwIDI3IDE4Ij48ZGVmcz48cGF0aCBpZD0icyIgZD0iTTAsLTEgMC41ODc3ODUsMC44MDkwMTcgLTAuOTUxMDU3LC0wLjMwOTAxN0gwLjk1MTA1N0wtMC41ODc3ODUsMC44MDkwMTd6IiBmaWxsPSIjZmZkZTAwIi8+PC9kZWZzPjxyZWN0IHdpZHRoPSIzMCIgaGVpZ2h0PSIyMCIgZmlsbD0iI2RlMjkxMCIvPjx1c2UgeGxpbms6aHJlZj0iI3MiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDUsNSkgc2NhbGUoMykiLz48dXNlIHhsaW5rOmhyZWY9IiNzIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgxMCwyKSByb3RhdGUoMjMuMDM2MjQzKSIvPjx1c2UgeGxpbms6aHJlZj0iI3MiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDEyLDQpIHJvdGF0ZSg0NS44Njk4OTgpIi8+PHVzZSB4bGluazpocmVmPSIjcyIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMTIsNykgcm90YXRlKDY5Ljk0NTM5NikiLz48dXNlIHhsaW5rOmhyZWY9IiNzIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgxMCw5KSByb3RhdGUoMjAuNjU5ODA4KSIvPjwvc3ZnPg==);
+}
